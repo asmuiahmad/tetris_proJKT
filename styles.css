@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    transition: 0.3s cubic-bezier(0.6, 0, 0.2, 1);
+}
+
+body {
+    transition: 0s;
+    background-color: #BBC;
+}
+
+.canvas-container {
+    position: absolute; /* Fixed missing colon */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Fixed missing colon and commas */
+    height: 720px;
+    width: 720px;
+}
+
+#cnv {
+    height: 100%; /* Fixed missing semicolon */
+    width: 100%; /* Fixed missing semicolon */
+}
+
+@media screen and (max-height: 800px) {
+    .canvas-container {
+        transform: translate(-50%, -50%) scale(0.8); /* Fixed missing curly braces and semicolon */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .canvas-container {
+        transform: translate(-50%, -50%) scale(0.7); /* Fixed missing curly braces and semicolon */
+    }
+}
